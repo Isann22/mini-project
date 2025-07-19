@@ -50,7 +50,7 @@ export default class MessagesController {
     const message_id = request.param('id')
     const message = await Message.findOrFail(message_id)
     await message.delete()
-    response.ok({message:'succes'})
+    response.ok({message:'OK'})
     }catch(error){
       response.notFound({data:'messages not found'})
     }
